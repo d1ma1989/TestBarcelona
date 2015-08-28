@@ -12,7 +12,7 @@ SceneSettings:
     backfaceThreshold: 100
 --- !u!104 &2
 RenderSettings:
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: .316176474, g: .316176474, b: .316176474, a: 1}
   m_FogMode: 3
   m_FogDensity: .00999999978
