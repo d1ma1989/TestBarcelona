@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 457140}
   - 33: {fileID: 3357140}
   - 23: {fileID: 2357140}
-  - 95: {fileID: 9557140}
   m_Layer: 0
   m_Name: rock_04
   m_TagString: Untagged
@@ -42,7 +41,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 18442d55cf4d04842a8d9a4db32560fd, type: 2}
+  - {fileID: 2100000, guid: ed616ed7dea63473d9d8c68ffbf21c97, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

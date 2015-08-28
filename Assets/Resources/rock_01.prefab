@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 434624}
   - 33: {fileID: 3334624}
   - 23: {fileID: 2334624}
-  - 95: {fileID: 9534624}
   m_Layer: 0
   m_Name: rock_01
   m_TagString: Untagged
