@@ -35,29 +35,22 @@ LightmapSettings:
   m_LightProbes: {fileID: 0}
   m_Lightmaps:
   - m_Lightmap: {fileID: 2800000, guid: 6e8c1bcff0c6240dd93195a339cb2943, type: 3}
-    m_IndirectLightmap: {fileID: 2800000, guid: 65b09456df6c745d9a6f880c7af8407b,
-      type: 3}
+    m_IndirectLightmap: {fileID: 0}
   - m_Lightmap: {fileID: 2800000, guid: c539b6a97af804d67a7f32c882a0eac3, type: 3}
-    m_IndirectLightmap: {fileID: 2800000, guid: 31d9d5172df444857b1d60733e909cbf,
-      type: 3}
+    m_IndirectLightmap: {fileID: 0}
   - m_Lightmap: {fileID: 2800000, guid: 900856d575eac40248c932bdd060b8d7, type: 3}
-    m_IndirectLightmap: {fileID: 2800000, guid: 5d17e1837c5d24ec99352eebd3b91c9e,
-      type: 3}
+    m_IndirectLightmap: {fileID: 0}
   - m_Lightmap: {fileID: 2800000, guid: cd09acefb56644c71a6e59f39da0aa14, type: 3}
-    m_IndirectLightmap: {fileID: 2800000, guid: 3cdf89d50c6fa43258c36092ca87916e,
-      type: 3}
+    m_IndirectLightmap: {fileID: 0}
   - m_Lightmap: {fileID: 2800000, guid: b9e55e0e230b04385a2ed6f5f0e3dbc1, type: 3}
-    m_IndirectLightmap: {fileID: 2800000, guid: 95f6f04bb5571446f87f279554c3f1cc,
-      type: 3}
+    m_IndirectLightmap: {fileID: 0}
   - m_Lightmap: {fileID: 2800000, guid: 10ece8138b49946e398b1c662a9b3758, type: 3}
-    m_IndirectLightmap: {fileID: 2800000, guid: cb8657bbb435944d998704c4b9b6a2eb,
-      type: 3}
+    m_IndirectLightmap: {fileID: 0}
   - m_Lightmap: {fileID: 2800000, guid: c4599f492b4fe4838adb4085d070880d, type: 3}
-    m_IndirectLightmap: {fileID: 2800000, guid: 5837d58c46e724f92bfc97e82b356c98,
-      type: 3}
-  m_LightmapsMode: 1
+    m_IndirectLightmap: {fileID: 0}
+  m_LightmapsMode: 0
   m_BakedColorSpace: 0
-  m_UseDualLightmapsInForward: 0
+  m_UseDualLightmapsInForward: 1
   m_LightmapEditorSettings:
     m_Resolution: 50
     m_LastUsedResolution: 50
@@ -67,14 +60,14 @@ LightmapSettings:
     m_BounceIntensity: 1
     m_SkyLightColor: {r: .860000014, g: .930000007, b: 1, a: 1}
     m_SkyLightIntensity: .300000012
-    m_Quality: 1
+    m_Quality: 0
     m_Bounces: 2
-    m_FinalGatherRays: 200
-    m_FinalGatherContrastThreshold: .100000001
+    m_FinalGatherRays: 1000
+    m_FinalGatherContrastThreshold: .0500000007
     m_FinalGatherGradientThreshold: 0
     m_FinalGatherInterpolationPoints: 15
     m_AOAmount: 1
-    m_AOMaxDistance: .100000001
+    m_AOMaxDistance: .0299999993
     m_AOContrast: 1
     m_LODSurfaceMappingDistance: 1
     m_Padding: 0
@@ -104,7 +97,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 43853448}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +124,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 54362626}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_LForearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +154,7 @@ GameObject:
   - 136: {fileID: 88234031}
   - 114: {fileID: 88234030}
   - 54: {fileID: 88234032}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy_01
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -182,7 +175,7 @@ Transform:
   - {fileID: 1091144029}
   - {fileID: 1099002130}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
 --- !u!114 &88234030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,7 +317,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 94831050}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_RCalf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +344,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 99438387}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_ArmR1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +371,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 127800937}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cannon_Dummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,7 +398,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 142732604}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_LThigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +478,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2346822, guid: e2ee3c58895f94773adc545dfd8380e3, type: 2}
       propertyPath: m_LightmapTilingOffset.z
-      value: -.000370025635
+      value: .191036224
       objectReference: {fileID: 0}
     - target: {fileID: 2346822, guid: e2ee3c58895f94773adc545dfd8380e3, type: 2}
       propertyPath: m_LightmapTilingOffset.w
@@ -505,7 +498,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 146901177}
   - 137: {fileID: 146901178}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CHR_M_OldRanged_A_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -588,7 +581,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 150921525}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_ChestExtra3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -616,7 +609,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 166030133}
   - 95: {fileID: 166030134}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CHR_M_OldRanged_A_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -685,7 +678,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 187841411}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_HeadExtra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -744,7 +737,7 @@ Renderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 1
-  m_LightmapTilingOffset: {x: .0869140625, y: .0869140625, z: .878566742, w: .339504242}
+  m_LightmapTilingOffset: {x: .0869140625, y: .0869140625, z: .790676117, w: .909816742}
   m_Materials:
   - {fileID: 2100000, guid: ed616ed7dea63473d9d8c68ffbf21c97, type: 2}
   m_SubsetIndices: 
@@ -770,7 +763,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 201822653}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_LPalm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -905,7 +898,7 @@ Renderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 1
-  m_LightmapTilingOffset: {x: .0869140625, y: .0869140625, z: .878566742, w: .278957367}
+  m_LightmapTilingOffset: {x: .0869140625, y: .0869140625, z: .702785492, w: .909816742}
   m_Materials:
   - {fileID: 2100000, guid: ed616ed7dea63473d9d8c68ffbf21c97, type: 2}
   m_SubsetIndices: 
@@ -963,7 +956,7 @@ Renderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 1
-  m_LightmapTilingOffset: {x: .0869140625, y: .0869140625, z: .527004242, w: .909816742}
+  m_LightmapTilingOffset: {x: .0869140625, y: .0869140625, z: .614894867, w: .909816742}
   m_Materials:
   - {fileID: 2100000, guid: ed616ed7dea63473d9d8c68ffbf21c97, type: 2}
   m_SubsetIndices: 
@@ -989,7 +982,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 284574748}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1173,7 +1166,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 305260509}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_LegR1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1200,7 +1193,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 310288087}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_RPalm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1227,7 +1220,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 312892240}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_LegL2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1256,7 +1249,7 @@ GameObject:
   - 4: {fileID: 317723268}
   - 33: {fileID: 317723267}
   - 23: {fileID: 317723265}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: detectFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1312,7 +1305,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 319783211}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_RFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1339,7 +1332,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 325549401}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_LFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1386,7 +1379,7 @@ Renderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 6
-  m_LightmapTilingOffset: {x: .370117188, y: .370117188, z: .364765167, w: -.00144577026}
+  m_LightmapTilingOffset: {x: .370117188, y: .370117188, z: -.00144577026, w: .335468292}
   m_Materials:
   - {fileID: 2100000, guid: 65d95995fb3874d43a9771160741f083, type: 2}
   m_SubsetIndices: 
@@ -1424,7 +1417,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 332542668}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Coat01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1451,7 +1444,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 335759939}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_HipsExtra1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1536,7 +1529,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 342567220}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_SwordL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1620,11 +1613,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2346822, guid: e2ee3c58895f94773adc545dfd8380e3, type: 2}
       propertyPath: m_LightmapTilingOffset.z
-      value: .702785492
+      value: .878566742
       objectReference: {fileID: 0}
     - target: {fileID: 2346822, guid: e2ee3c58895f94773adc545dfd8380e3, type: 2}
       propertyPath: m_LightmapTilingOffset.w
-      value: .909816742
+      value: .339504242
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2ee3c58895f94773adc545dfd8380e3, type: 2}
@@ -1730,7 +1723,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400086, guid: fca9ee6015d3549b59cc6facfc3a784c, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400148, guid: fca9ee6015d3549b59cc6facfc3a784c, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1785,7 +1778,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 391534058}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Coat02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1812,7 +1805,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 392672197}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_LPalm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1868,7 +1861,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400086, guid: fca9ee6015d3549b59cc6facfc3a784c, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 13700002, guid: fca9ee6015d3549b59cc6facfc3a784c, type: 2}
       propertyPath: m_CastShadows
@@ -1891,7 +1884,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 426019464}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_LegL1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1918,7 +1911,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 437758516}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_RForearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1945,7 +1938,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 446223352}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2044,7 +2037,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 450175011}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2071,7 +2064,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 451008505}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cannon_Dummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2098,7 +2091,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 471411971}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_RCalf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2126,7 +2119,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 475883433}
   - 137: {fileID: 475883434}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CHR_M_OldRanged_A_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2209,7 +2202,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 480177306}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Coat03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2236,7 +2229,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 496579337}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_RCalf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2265,7 +2258,7 @@ GameObject:
   - 4: {fileID: 500609836}
   - 33: {fileID: 500609839}
   - 23: {fileID: 500609837}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: detectFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2321,7 +2314,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 510322044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_RThigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2348,7 +2341,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 536571527}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2375,7 +2368,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 538229975}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_ArmL1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2402,7 +2395,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 569958642}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Moustache
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2430,7 +2423,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 573210302}
   - 137: {fileID: 573210303}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CHR_M_Viking_A_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2514,7 +2507,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 601425618}
   - 137: {fileID: 601425619}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CHR_M_OldRanged_A_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2723,7 +2716,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 621698408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2807,7 +2800,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2346822, guid: e2ee3c58895f94773adc545dfd8380e3, type: 2}
       propertyPath: m_LightmapTilingOffset.z
-      value: .527004242
+      value: .614894867
       objectReference: {fileID: 0}
     - target: {fileID: 2346822, guid: e2ee3c58895f94773adc545dfd8380e3, type: 2}
       propertyPath: m_LightmapTilingOffset.w
@@ -2829,7 +2822,7 @@ GameObject:
   - 136: {fileID: 642513904}
   - 114: {fileID: 642513905}
   - 54: {fileID: 642513902}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy_01
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2850,7 +2843,7 @@ Transform:
   - {fileID: 317723268}
   - {fileID: 166030133}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!54 &642513902
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2906,7 +2899,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 668287096}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Coat03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2935,7 +2928,7 @@ GameObject:
   - 4: {fileID: 682705185}
   - 198: {fileID: 682705187}
   - 199: {fileID: 682705186}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3978,7 +3971,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 685204434}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4006,7 +3999,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 687877512}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4033,7 +4026,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 740745874}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4060,7 +4053,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 741830582}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4168,7 +4161,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 768934536}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_RForearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4195,7 +4188,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 775065035}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_ArmR2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4222,7 +4215,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 791657446}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_LFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4250,7 +4243,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 802807673}
   - 95: {fileID: 802807674}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CHR_M_Viking_A_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4295,7 +4288,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 807539692}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_ArmLPalm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4379,7 +4372,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2346822, guid: e2ee3c58895f94773adc545dfd8380e3, type: 2}
       propertyPath: m_LightmapTilingOffset.z
-      value: .790676117
+      value: .527004242
       objectReference: {fileID: 0}
     - target: {fileID: 2346822, guid: e2ee3c58895f94773adc545dfd8380e3, type: 2}
       propertyPath: m_LightmapTilingOffset.w
@@ -4398,7 +4391,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 820051766}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Coat04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4425,7 +4418,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 853523899}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_LUpperarm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4649,7 +4642,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 878147892}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4708,7 +4701,7 @@ Renderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 1
-  m_LightmapTilingOffset: {x: .0947265625, y: .0947265625, z: -.000370025635, w: .909786224}
+  m_LightmapTilingOffset: {x: .0947265625, y: .0947265625, z: .191036224, w: .909786224}
   m_Materials:
   - {fileID: 2100000, guid: ed616ed7dea63473d9d8c68ffbf21c97, type: 2}
   m_SubsetIndices: 
@@ -4734,7 +4727,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 880110270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_RUpperarm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4814,11 +4807,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2346822, guid: e2ee3c58895f94773adc545dfd8380e3, type: 2}
       propertyPath: m_LightmapTilingOffset.z
-      value: .878566742
+      value: .790676117
       objectReference: {fileID: 0}
     - target: {fileID: 2346822, guid: e2ee3c58895f94773adc545dfd8380e3, type: 2}
       propertyPath: m_LightmapTilingOffset.w
-      value: .339504242
+      value: .909816742
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2ee3c58895f94773adc545dfd8380e3, type: 2}
@@ -4854,7 +4847,7 @@ Transform:
   - {fileID: 2104697328}
   - {fileID: 1323155085}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!1 &935639808
 GameObject:
   m_ObjectHideFlags: 0
@@ -4863,7 +4856,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 935639809}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_LegRFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4921,70 +4914,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
---- !u!1 &944266826
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 944266828}
-  - 108: {fileID: 944266827}
-  m_Layer: 0
-  m_Name: Directional light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &944266827
-Light:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 944266826}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Type: 1
-  m_Color: {r: .238362059, g: .278658509, b: .580882311, a: 1}
-  m_Intensity: .400000006
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: 3
-    m_Strength: 1
-    m_Bias: .0500000007
-    m_Softness: 4
-    m_SoftnessFade: 1
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_ActuallyLightmapped: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 1
-  m_ShadowSamples: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_IndirectIntensity: 1
-  m_AreaSize: {x: 1, y: 1}
---- !u!4 &944266828
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 944266826}
-  m_LocalRotation: {x: -.734661877, y: .0501147769, z: -.674373746, w: -.054594975}
-  m_LocalPosition: {x: 1.73475599, y: 19.75, z: 10.6543446}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &946071480
 GameObject:
   m_ObjectHideFlags: 0
@@ -4993,7 +4923,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 946071481}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_LPalm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5022,7 +4952,7 @@ GameObject:
   - 4: {fileID: 951785447}
   - 33: {fileID: 951785449}
   - 23: {fileID: 951785448}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5078,7 +5008,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 967241517}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Coat03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5186,7 +5116,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 993175081}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_RFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5215,7 +5145,7 @@ GameObject:
   - 4: {fileID: 1003216974}
   - 33: {fileID: 1003216976}
   - 23: {fileID: 1003216975}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5329,7 +5259,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1021297044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Coat02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5414,7 +5344,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1035785861}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5473,7 +5403,7 @@ Renderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 1
-  m_LightmapTilingOffset: {x: .0869140625, y: .0869140625, z: .790676117, w: .909816742}
+  m_LightmapTilingOffset: {x: .0869140625, y: .0869140625, z: .527004242, w: .909816742}
   m_Materials:
   - {fileID: 2100000, guid: ed616ed7dea63473d9d8c68ffbf21c97, type: 2}
   m_SubsetIndices: 
@@ -5519,7 +5449,7 @@ Renderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 2
-  m_LightmapTilingOffset: {x: .458984375, y: .458984375, z: -.00179290771, w: .453285217}
+  m_LightmapTilingOffset: {x: .458984375, y: .458984375, z: .437660217, w: -.00179290771}
   m_Materials:
   - {fileID: 2100000, guid: 6cadb73b75d224f76946924f218a509d, type: 2}
   m_SubsetIndices: 
@@ -5557,7 +5487,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1054673937}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Moustache
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5642,7 +5572,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1058421083}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5689,7 +5619,7 @@ Renderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 2
-  m_LightmapTilingOffset: {x: .458984375, y: .458984375, z: -.00179290771, w: -.00179290771}
+  m_LightmapTilingOffset: {x: .458984375, y: .458984375, z: -.00179290771, w: .453285217}
   m_Materials:
   - {fileID: 2100000, guid: 6cadb73b75d224f76946924f218a509d, type: 2}
   m_SubsetIndices: 
@@ -5727,7 +5657,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1072989542}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_ArmRPalm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5754,7 +5684,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1078623523}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_LForearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5917,7 +5847,7 @@ Renderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 6
-  m_LightmapTilingOffset: {x: .370117188, y: .370117188, z: -.00144577026, w: -.00144577026}
+  m_LightmapTilingOffset: {x: .370117188, y: .370117188, z: .364765167, w: -.00144577026}
   m_Materials:
   - {fileID: 2100000, guid: 65d95995fb3874d43a9771160741f083, type: 2}
   m_SubsetIndices: 
@@ -5957,7 +5887,7 @@ GameObject:
   - 4: {fileID: 1091144029}
   - 33: {fileID: 1091144032}
   - 23: {fileID: 1091144030}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: detectFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6014,7 +5944,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1099002130}
   - 95: {fileID: 1099002131}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CHR_M_OldRanged_A_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6199,7 +6129,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1124004649}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_ArmL1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6226,7 +6156,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1138663478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cannon_Dummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6253,7 +6183,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1142473281}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_LUpperarm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6337,11 +6267,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2346822, guid: e2ee3c58895f94773adc545dfd8380e3, type: 2}
       propertyPath: m_LightmapTilingOffset.z
-      value: .878566742
+      value: .702785492
       objectReference: {fileID: 0}
     - target: {fileID: 2346822, guid: e2ee3c58895f94773adc545dfd8380e3, type: 2}
       propertyPath: m_LightmapTilingOffset.w
-      value: .278957367
+      value: .909816742
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2ee3c58895f94773adc545dfd8380e3, type: 2}
@@ -6356,7 +6286,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1166015747}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6409,7 +6339,7 @@ GameObject:
   - 4: {fileID: 1183601574}
   - 198: {fileID: 1183601576}
   - 199: {fileID: 1183601575}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PFX_JumpSmoke_A_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7467,7 +7397,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1202107535}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_RUpperarm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7494,7 +7424,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1209094979}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_LegLFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7581,7 +7511,7 @@ GameObject:
   - 4: {fileID: 1242315023}
   - 198: {fileID: 1242315025}
   - 199: {fileID: 1242315024}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PFX_JumpRocks_A_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8643,7 +8573,7 @@ GameObject:
   - 136: {fileID: 1270714640}
   - 114: {fileID: 1270714639}
   - 54: {fileID: 1270714641}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy_01
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -8664,7 +8594,7 @@ Transform:
   - {fileID: 500609836}
   - {fileID: 1760514267}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
 --- !u!114 &1270714639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8802,8 +8732,8 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 5
-  m_LightmapTilingOffset: {x: .370117188, y: .370117188, z: .364765167, w: .335468292}
+  m_LightmapIndex: 6
+  m_LightmapTilingOffset: {x: .370117188, y: .370117188, z: -.00144577026, w: -.00144577026}
   m_Materials:
   - {fileID: 2100000, guid: 65d95995fb3874d43a9771160741f083, type: 2}
   m_SubsetIndices: 
@@ -8861,7 +8791,7 @@ Renderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 5
-  m_LightmapTilingOffset: {x: .370117188, y: .370117188, z: -.00144577026, w: .335468292}
+  m_LightmapTilingOffset: {x: .370117188, y: .370117188, z: .364765167, w: .335468292}
   m_Materials:
   - {fileID: 2100000, guid: 65d95995fb3874d43a9771160741f083, type: 2}
   m_SubsetIndices: 
@@ -8899,7 +8829,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1317209299}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Coat02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8926,7 +8856,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1320095245}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_LCalf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9010,7 +8940,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1328347429}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_HipsExtraL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9037,7 +8967,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1334075097}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_RPalm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9066,7 +8996,7 @@ GameObject:
   - 4: {fileID: 1343537282}
   - 33: {fileID: 1343537284}
   - 23: {fileID: 1343537283}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9155,7 +9085,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400086, guid: fca9ee6015d3549b59cc6facfc3a784c, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400148, guid: fca9ee6015d3549b59cc6facfc3a784c, type: 2}
       propertyPath: m_LocalRotation.x
@@ -9214,7 +9144,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1370718729}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Coat04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9243,7 +9173,7 @@ GameObject:
   - 4: {fileID: 1371767273}
   - 33: {fileID: 1371767275}
   - 23: {fileID: 1371767274}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9376,8 +9306,8 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 1
-  m_LightmapTilingOffset: {x: .458984375, y: .458984375, z: .437660217, w: .453285217}
+  m_LightmapIndex: 2
+  m_LightmapTilingOffset: {x: .458984375, y: .458984375, z: -.00179290771, w: -.00179290771}
   m_Materials:
   - {fileID: 2100000, guid: 6cadb73b75d224f76946924f218a509d, type: 2}
   m_SubsetIndices: 
@@ -9496,7 +9426,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1425450728}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_OldRangedWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9524,7 +9454,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1428803360}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_LUpperarm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9583,7 +9513,7 @@ Renderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 1
-  m_LightmapTilingOffset: {x: .0947265625, y: .0947265625, z: .191036224, w: .909786224}
+  m_LightmapTilingOffset: {x: .0947265625, y: .0947265625, z: -.000370025635, w: .909786224}
   m_Materials:
   - {fileID: 2100000, guid: ed616ed7dea63473d9d8c68ffbf21c97, type: 2}
   m_SubsetIndices: 
@@ -9826,7 +9756,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1442585098}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_RForearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9942,7 +9872,7 @@ Renderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 5
-  m_LightmapTilingOffset: {x: .370117188, y: .370117188, z: .364765167, w: -.00144577026}
+  m_LightmapTilingOffset: {x: .370117188, y: .370117188, z: -.00144577026, w: .335468292}
   m_Materials:
   - {fileID: 2100000, guid: 65d95995fb3874d43a9771160741f083, type: 2}
   m_SubsetIndices: 
@@ -9980,7 +9910,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1463434776}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_RPalm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10065,7 +9995,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1497972024}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_RThigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10092,7 +10022,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1500682321}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10119,7 +10049,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1513813578}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Coat04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10146,7 +10076,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1532595704}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10215,7 +10145,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1538775993}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_LCalf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10337,7 +10267,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2361650, guid: bdca4f3f106224d86b52c3f4c2fa7048, type: 2}
       propertyPath: m_LightmapIndex
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2361650, guid: bdca4f3f106224d86b52c3f4c2fa7048, type: 2}
       propertyPath: m_LightmapTilingOffset.x
@@ -10369,7 +10299,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1581707057}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_OldRangedWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10397,7 +10327,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1586317970}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Hoodie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10424,7 +10354,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1588748929}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Hoodie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10451,7 +10381,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1634935687}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10498,7 +10428,7 @@ Renderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 1
-  m_LightmapTilingOffset: {x: .458984375, y: .458984375, z: .437660217, w: -.00179290771}
+  m_LightmapTilingOffset: {x: .458984375, y: .458984375, z: .437660217, w: .453285217}
   m_Materials:
   - {fileID: 2100000, guid: 6cadb73b75d224f76946924f218a509d, type: 2}
   m_SubsetIndices: 
@@ -10594,7 +10524,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1657715452}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_LThigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10621,7 +10551,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1686733728}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10732,7 +10662,7 @@ RectTransform:
   - {fileID: 2063369706}
   - {fileID: 864274775}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -10767,7 +10697,7 @@ GameObject:
   - 4: {fileID: 1690922231}
   - 198: {fileID: 1690922233}
   - 199: {fileID: 1690922232}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PFX_JumpSmoke_A_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11825,7 +11755,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1706224281}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Coat01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11852,7 +11782,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1715332683}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Hoodie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11899,7 +11829,7 @@ Renderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 5
-  m_LightmapTilingOffset: {x: .370117188, y: .370117188, z: -.00144577026, w: -.00144577026}
+  m_LightmapTilingOffset: {x: .370117188, y: .370117188, z: .364765167, w: -.00144577026}
   m_Materials:
   - {fileID: 2100000, guid: 65d95995fb3874d43a9771160741f083, type: 2}
   m_SubsetIndices: 
@@ -11937,7 +11867,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1716952255}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_LegR2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11996,7 +11926,7 @@ Renderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 1
-  m_LightmapTilingOffset: {x: .0869140625, y: .0869140625, z: .702785492, w: .909816742}
+  m_LightmapTilingOffset: {x: .0869140625, y: .0869140625, z: .878566742, w: .339504242}
   m_Materials:
   - {fileID: 2100000, guid: ed616ed7dea63473d9d8c68ffbf21c97, type: 2}
   m_SubsetIndices: 
@@ -12022,7 +11952,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1751921669}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12050,7 +11980,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1760514267}
   - 95: {fileID: 1760514268}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CHR_M_OldRanged_A_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12119,7 +12049,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1763908056}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_RThigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12146,7 +12076,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1780027261}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_RFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12173,7 +12103,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1780226383}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12202,7 +12132,7 @@ GameObject:
   - 4: {fileID: 1784130520}
   - 108: {fileID: 1784130519}
   m_Layer: 0
-  m_Name: Directional light
+  m_Name: DirectionalLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12218,29 +12148,29 @@ Light:
   serializedVersion: 3
   m_Type: 1
   m_Color: {r: .889705896, g: .879329026, b: .53689146, a: 1}
-  m_Intensity: .400000006
+  m_Intensity: .699999988
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: 3
-    m_Strength: 1
-    m_Bias: .0500000007
+    m_Resolution: -1
+    m_Strength: .800000012
+    m_Bias: .510999978
     m_Softness: 4
     m_SoftnessFade: 1
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_ActuallyLightmapped: 1
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 1
+    m_Bits: 1
+  m_Lightmapping: 2
   m_ShadowSamples: 1
   m_ShadowRadius: 0
-  m_ShadowAngle: 0
+  m_ShadowAngle: 4.75
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
 --- !u!4 &1784130520
@@ -12249,8 +12179,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1784130518}
-  m_LocalRotation: {x: -.311337709, y: .612875402, z: -.285788506, w: -.66766578}
-  m_LocalPosition: {x: 1.73475599, y: 19.75, z: 10.6543446}
+  m_LocalRotation: {x: -.264636666, y: .7066257, z: -.329504877, w: -.56751579}
+  m_LocalPosition: {x: 1.73000002, y: 10.5100002, z: 10.6499996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12294,7 +12224,7 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 2
+  m_LightmapIndex: 1
   m_LightmapTilingOffset: {x: .458984375, y: .458984375, z: .437660217, w: -.00179290771}
   m_Materials:
   - {fileID: 2100000, guid: 6cadb73b75d224f76946924f218a509d, type: 2}
@@ -12379,7 +12309,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1798199790}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_LForearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12408,7 +12338,7 @@ GameObject:
   - 4: {fileID: 1799252361}
   - 198: {fileID: 1799252363}
   - 199: {fileID: 1799252362}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13520,7 +13450,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 04d6131e908f5a1438c88e46246b443e, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 19556366, guid: 04d6131e908f5a1438c88e46246b443e, type: 2}
       propertyPath: m_Enabled
@@ -13643,8 +13573,8 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 6
-  m_LightmapTilingOffset: {x: .370117188, y: .370117188, z: -.00144577026, w: .335468292}
+  m_LightmapIndex: 5
+  m_LightmapTilingOffset: {x: .370117188, y: .370117188, z: -.00144577026, w: -.00144577026}
   m_Materials:
   - {fileID: 2100000, guid: 65d95995fb3874d43a9771160741f083, type: 2}
   m_SubsetIndices: 
@@ -13744,7 +13674,7 @@ GameObject:
   - 4: {fileID: 1836396313}
   - 198: {fileID: 1836396315}
   - 199: {fileID: 1836396314}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PFX_Viking_GroundHit_A_01_ATK_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14855,7 +14785,7 @@ Renderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 1
-  m_LightmapTilingOffset: {x: .0869140625, y: .0869140625, z: .614894867, w: .909816742}
+  m_LightmapTilingOffset: {x: .0869140625, y: .0869140625, z: .878566742, w: .278957367}
   m_Materials:
   - {fileID: 2100000, guid: ed616ed7dea63473d9d8c68ffbf21c97, type: 2}
   m_SubsetIndices: 
@@ -14881,7 +14811,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1846835227}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14910,7 +14840,7 @@ GameObject:
   - 4: {fileID: 1848756707}
   - 114: {fileID: 1848756708}
   - 195: {fileID: 1848756709}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14931,7 +14861,7 @@ Transform:
   - {fileID: 802807673}
   - {fileID: 1003216974}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
 --- !u!114 &1848756708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15089,7 +15019,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1872450207}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Moustache
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15232,7 +15162,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1918838164}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_ChestExtra1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15259,7 +15189,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1928428450}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_LFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15286,7 +15216,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1955946291}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_ChestExtra2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15362,11 +15292,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2361240, guid: 2bf46ad4598f249bda89f5e8149cd42b, type: 2}
       propertyPath: m_LightmapTilingOffset.z
-      value: .364765167
+      value: -.00144577026
       objectReference: {fileID: 0}
     - target: {fileID: 2361240, guid: 2bf46ad4598f249bda89f5e8149cd42b, type: 2}
       propertyPath: m_LightmapTilingOffset.w
-      value: -.00144577026
+      value: .335468292
       objectReference: {fileID: 0}
     - target: {fileID: 2361240, guid: 2bf46ad4598f249bda89f5e8149cd42b, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -15386,7 +15316,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1961284408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15471,7 +15401,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1980620090}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_RUpperarm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15498,7 +15428,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1981890617}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_LThigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15525,7 +15455,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2003840006}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_HipsExtraR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15552,7 +15482,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2014048117}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_OldRangedWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15638,7 +15568,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2043900141}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B_SwordR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15665,7 +15595,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2046781410}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PFX_JumpRocksPlane_A_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15684,69 +15614,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1242315023}
   m_RootOrder: 0
---- !u!1 &2050430294
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2050430296}
-  - 108: {fileID: 2050430295}
-  m_Layer: 0
-  m_Name: Directional light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &2050430295
-Light:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2050430294}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Type: 1
-  m_Color: {r: 1, g: .603448272, b: .603448272, a: 1}
-  m_Intensity: .200000003
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: 3
-    m_Strength: 1
-    m_Bias: .0500000007
-    m_Softness: 4
-    m_SoftnessFade: 1
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_ActuallyLightmapped: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 1
-  m_ShadowSamples: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_IndirectIntensity: 1
-  m_AreaSize: {x: 1, y: 1}
---- !u!4 &2050430296
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2050430294}
-  m_LocalRotation: {x: .337739795, y: -.544797838, z: .25404343, w: .724285245}
-  m_LocalPosition: {x: 1.73475599, y: 19.75, z: 10.6543446}
-  m_LocalScale: {x: 1, y: .99999994, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
 --- !u!1 &2060868900
 GameObject:
   m_ObjectHideFlags: 0
@@ -15755,7 +15622,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2060868901}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Coat01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15921,7 +15788,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2082805426}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15950,7 +15817,7 @@ GameObject:
   - 4: {fileID: 2090411977}
   - 198: {fileID: 2090411979}
   - 199: {fileID: 2090411978}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PFX_Viking_Ground_A_01_ATK_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17194,11 +17061,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2346822, guid: e2ee3c58895f94773adc545dfd8380e3, type: 2}
       propertyPath: m_LightmapTilingOffset.z
-      value: .614894867
+      value: .878566742
       objectReference: {fileID: 0}
     - target: {fileID: 2346822, guid: e2ee3c58895f94773adc545dfd8380e3, type: 2}
       propertyPath: m_LightmapTilingOffset.w
-      value: .909816742
+      value: .278957367
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2ee3c58895f94773adc545dfd8380e3, type: 2}
@@ -17213,7 +17080,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2133969452}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BON_LCalf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17293,7 +17160,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2346822, guid: e2ee3c58895f94773adc545dfd8380e3, type: 2}
       propertyPath: m_LightmapTilingOffset.z
-      value: .191036224
+      value: -.000370025635
       objectReference: {fileID: 0}
     - target: {fileID: 2346822, guid: e2ee3c58895f94773adc545dfd8380e3, type: 2}
       propertyPath: m_LightmapTilingOffset.w
