@@ -1,64 +1,69 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class PlayerController : MonoBehaviour {
-	
-	EnemyController _target = null;
-	bool _isAttacking = false;
+public class PlayerController : CachedMonoBehaviour
+{
+	[SerializeField] private Animator _animator;
+	[SerializeField] private NavMeshAgent _navMeshAgent;
+	[SerializeField] private ParticleSystem _rocksFX;
+	[SerializeField] private ParticleSystem _dustFX;
 
-	void Start () {
+	private EnemyController _target;
+	private bool _isAttacking;
 
-	}
-
-	void Update () {
+	private void Update()
+	{
 		if (_target != null)
 		{
 			if (!_isAttacking)
 			{
-				float distance = Vector3.Distance(transform.position, _target.transform.position);
-
+				float distance = Vector3.Distance(CachedTransform.position, _target.CachedTransform.position);
 				if (distance < 3f)
 				{
 					_isAttacking = true;
-					transform.FindChild("CHR_M_Viking_A_01").GetComponent<Animator>().SetTrigger("Attack");
-					GetComponent<NavMeshAgent>().Stop();
-					Invoke("killTarget", 0.25f);
+					_animator.SetTrigger("Attack");
+					_navMeshAgent.Stop();
+					Invoke("KillTarget", 0.25f);
 				}
 			}
 		}
 
-		transform.FindChild("CHR_M_Viking_A_01").GetComponent<Animator>().SetFloat("LocomotionSpeed", GetComponent<NavMeshAgent>().velocity.magnitude);
+		_animator.SetFloat("LocomotionSpeed", _navMeshAgent.velocity.magnitude);
 
+		if (_navMeshAgent.velocity.magnitude > 0)
+		{
+			_dustFX.Emit(2);
+		}
 	}
 
-	void killTarget()
+	private void KillTarget()
 	{
-		_target.GetComponent<EnemyController>().OnKilled();
-		FindObjectOfType<GameController> ().OnEnemyKilled ();
+		_target.OnKilled();
+		_rocksFX.Emit(15);
 		_isAttacking = false;
 		_target = null;
 	}
 
-	public void goToPosition(Vector3 position)
+	public void GoToPosition(Vector3 position)
 	{
-		if (!_isAttacking) {
+		if (!_isAttacking)
+		{
 			_target = null;
-			GetComponent<NavMeshAgent> ().SetDestination (position);
+			_navMeshAgent.SetDestination(position);
 		}
 	}
 
-	public void goToEnemy(GameObject enemy)
+	public void GoToEnemy(EnemyController enemy)
 	{
-		if (!_isAttacking) {
-			_target = enemy.GetComponent<EnemyController> ();
-			GetComponent<NavMeshAgent> ().SetDestination (enemy.transform.position);
+		if (!_isAttacking)
+		{
+			_target = enemy;
+			_navMeshAgent.SetDestination(enemy.CachedTransform.position);
 		}
 	}
 
-	public void OnDetected()
+	public void Die()
 	{
-		transform.FindChild("CHR_M_Viking_A_01").GetComponent<Animator>().SetTrigger("Die");
-		GetComponent<NavMeshAgent>().Stop();
-		FindObjectOfType<GameController> ().OnPlayerKilled ();
+		_animator.SetTrigger("Die");
+		_navMeshAgent.Stop();
 	}
 }

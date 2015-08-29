@@ -1,81 +1,98 @@
 ﻿using UnityEngine;
+using Random = UnityEngine.Random;
+
+using System;
 using System.Collections;
 
-public class EnemyController : MonoBehaviour {
+public class EnemyController : CachedMonoBehaviour
+{
+	[SerializeField] private GameObject _detectFX;
+	[SerializeField] private GameObject _shotFX;
+	[SerializeField] private GameObject _shadowPlaneGO;
+	[SerializeField] private Animator _animator;
 
-	public GameObject detectFX;
+	public event EventHandler OnEnemyKilled;
+	public event EventHandler OnCorpseDetected;
+	public event EventHandler OnPlayerDetected;
 
-	public float[] targetAngles;
-	public float timeToChange = 2f;
-	int _currentAngle = 0;
-	bool _isDead = false;
+	private readonly int[] _targetAngles = { 90, 0, -90, 180 };
 
-	// Use this for initialization
-	void Start () {
-		StartCoroutine(CO_ChangeOrientation());
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (!_isDead) {
+	private const float _timeToChange = 2f;
+	private int _currentAngle = 0;
 
-			// Check player in range
-			if (targetInRange(FindObjectOfType<PlayerController> ().transform.position))
-			{
-				FindObjectOfType<PlayerController> ().OnDetected ();
-			}
+	public bool IsDead { get; private set; }
 
-			// Check corpse in range
-			foreach(EnemyController enemy in FindObjectOfType<GameController>().getEnemies())
-			{
-				if (enemy.isDead())
-				{
-					if (targetInRange(enemy.transform.position))
-					{
-						FindObjectOfType<GameController> ().OnCorpseDetected();
-					}
-				}
-			}
-		}
-
-	}
-
-	IEnumerator CO_ChangeOrientation()
+	private IEnumerator Start()
 	{
-		yield return  new WaitForSeconds(Random.Range(0f, 2f));
-		while(true)
+		yield return new WaitForSeconds(Random.Range(0f, 2f));
+		while (true)
 		{
-			transform.eulerAngles = new Vector3(0f,targetAngles[_currentAngle], 0f);
-			yield return  new WaitForSeconds(timeToChange);		
+			transform.eulerAngles = new Vector3(0f, _targetAngles[_currentAngle], 0f);
+			yield return new WaitForSeconds(_timeToChange);
 			_currentAngle++;
-			if (_currentAngle >= targetAngles.Length)
+			if (_currentAngle >= _targetAngles.Length)
 			{
 				_currentAngle = 0;
 			}
 		}
 	}
 
+	private void OnMouseUpAsButton()
+	{
+		AppManager.GameController.Player.GoToEnemy(this);
+	}
+
+	private void Update()
+	{
+		// Check player in range
+		if (TargetInRange(AppManager.GameController.Player.CachedTransform.position))
+		{
+			_shotFX.SetActive(true);
+			if (OnPlayerDetected != null)
+			{
+				OnPlayerDetected(this, EventArgs.Empty);
+			}
+		}
+
+		// Check corpse in range
+		foreach (EnemyController enemy in AppManager.GameController.Enemies)
+		{
+			if (enemy.IsDead)
+			{
+				if (TargetInRange(enemy.CachedTransform.position))
+				{
+					if (OnCorpseDetected != null)
+					{
+						OnCorpseDetected(this, EventArgs.Empty);
+					}
+				}
+			}
+		}
+	}
+
 	public void OnKilled()
 	{
-		transform.FindChild("CHR_M_OldRanged_A_02").GetComponent<Animator>().SetTrigger("Die");
-		StopAllCoroutines();
-		detectFX.SetActive(false);
-		_isDead = true;
+		_animator.SetTrigger("Die");
+		IsDead = true;
+		_shadowPlaneGO.SetActive(false);
+		if (OnEnemyKilled != null)
+		{
+			OnEnemyKilled(this, EventArgs.Empty);
+		}
+		OnEndGame();
 	}
 
-	public bool isDead()
+	private bool TargetInRange(Vector3 targetPos)
 	{
-		return _isDead;
-	}
-
-	private bool targetInRange(Vector3 targetPos)
-	{
-		Vector3 toPlayerVector = targetPos - transform.position;
-		return (toPlayerVector.magnitude < 5f && Vector3.Angle (toPlayerVector, transform.forward) < 15f);
+		Vector3 toPlayerVector = targetPos - CachedTransform.position;
+		return (toPlayerVector.magnitude < 5f && Vector3.Angle(toPlayerVector, CachedTransform.forward) < 15f);
 	}
 
 	public void OnEndGame()
 	{
+		enabled = false;
 		StopAllCoroutines();
+		Collider.enabled = false;
+		_detectFX.SetActive(false);
 	}
 }

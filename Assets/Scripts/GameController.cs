@@ -1,141 +1,127 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class GameController : MonoBehaviour {
-	
-	public PlayerController playerController;
+using System;
 
-	public enum EGameState
-	{
-		E_START_GAME,
-		E_INGAME,
-		E_END_GAME_WIN,
-		E_END_GAME_PLAYER_DETECTED,
-		E_END_GAME_CORPSE_DETECTED,
-		E_END_GAME_TIMEOUT
-	}
+public class GameController : MonoBehaviour
+{
+	[SerializeField] private EnemyController[] _aEnemies;
+	[SerializeField] private PlayerController _playerController;
+	[SerializeField] private GroundClickListener _groundClickListener;
 
 	private int _remainingEnemies;
 
-	private EnemyController[] _aEnemies;
-	private float _countDownValue = 15f;
-	private EGameState _currentState = EGameState.E_START_GAME; 
+	public Camera MainCamera { get; private set; }
 
+	public EGameState CurrentState { get; private set; }
 
-	void Awake () {
-		Input.simulateMouseWithTouches = true;
-		_aEnemies = FindObjectsOfType<EnemyController> ();
-		_remainingEnemies = _aEnemies.Length;
-	}
-	
+	public PlayerController Player { get { return _playerController; } }
 
-	void Update () {
+	public EnemyController[] Enemies { get { return _aEnemies; } }
 
-		if (_currentState == EGameState.E_START_GAME)
-		{
-			if (Input.GetMouseButtonDown(0)) {
+	private float _countDown;
 
-				OnStartGame();
-				
-			}
-		}
-		else if (_currentState == EGameState.E_INGAME)
-		{
-
-			_countDownValue -= Time.deltaTime;
-
-			if (_countDownValue > 0)
-			{
-			
-				if (Input.GetMouseButtonDown(0)) {
-
-						RaycastHit hit;
-						Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-						if (Physics.Raycast(ray, out hit))
-						{
-							if (hit.collider.tag == "Enemy")
-							{
-								playerController.goToEnemy(hit.collider.gameObject);
-							}
-							else
-							{
-								playerController.goToPosition(hit.point);
-							}
-						}
-
-				}
-			}
-			else
-			{
-				_countDownValue = 0f;
-				OnTimeOut();
-			}
-		}
-
-
-
-	}
-
-	public void OnStartGame()
+	private void Awake()
 	{
-		FindObjectOfType<GUIController> ().OnStartGame ();
-		_currentState = EGameState.E_INGAME;
+		AppManager.GameController = this;
+
+		AppManager.GUI.ShowLoadingText(false);
+		AppManager.GUI.ShowInfoScreen(true);
+
+		Input.simulateMouseWithTouches = true;
+
+		_countDown = 15f;
+		_remainingEnemies = _aEnemies.Length;
+		MainCamera = Camera.main;
+
+		CurrentState = EGameState.E_START_GAME;
+
+		foreach (EnemyController enemy in _aEnemies)
+		{
+			enemy.OnEnemyKilled += OnEnemyKilled;
+			enemy.OnPlayerDetected += OnPlayerKilled;
+			enemy.OnCorpseDetected += OnCorpseDetected;
+		}
+
+		_groundClickListener.OnGroundClick += (sender, args) =>
+		{
+			if (CurrentState == EGameState.E_INGAME)
+			{
+				_playerController.GoToPosition(args.Pos);
+			}
+		};
 	}
 
-	public void OnEnemyKilled()
+	private void OnPlayerKilled(object sender, EventArgs args)
+	{
+		CurrentState = EGameState.E_END_GAME_PLAYER_DETECTED;
+		Player.Die();
+		EndGame();
+	}
+
+	private void OnEnemyKilled(object sender, EventArgs args)
 	{
 		_remainingEnemies--;
-		if (_remainingEnemies <= 0) {
-			_currentState = EGameState.E_END_GAME_WIN;
-			FindObjectOfType<GUIController> ().OnEndGame (_currentState);
+		if (_remainingEnemies <= 0)
+		{
+			CurrentState = EGameState.E_END_GAME_WIN;
+			EndGame();
+		}
+	}
 
-			// Disable all enemies
-			foreach(EnemyController enemy in FindObjectOfType<GameController>().getEnemies())
+	private void OnCorpseDetected(object sender, EventArgs args)
+	{
+		CurrentState = EGameState.E_END_GAME_CORPSE_DETECTED;
+		EndGame();
+	}
+
+	private void Update()
+	{
+		if (Input.GetMouseButtonUp(0))
+		{
+			if (CurrentState == EGameState.E_START_GAME)
 			{
-				enemy.OnEndGame();
+				AppManager.GUI.ShowInfoScreen(false);
+				AppManager.GUI.ShowTimer(true);
+				CurrentState = EGameState.E_INGAME;
+			}
+			else if( CurrentState != EGameState.E_INGAME)
+			{
+				AppManager.I.ReturnToMenu();
+			}
+		}
+
+		if (CurrentState == EGameState.E_INGAME)
+		{
+			_countDown -= Time.deltaTime;
+			AppManager.GUI.Timer = _countDown;
+			if (_countDown <= 0)
+			{
+				_countDown = 0f;
+				CurrentState = EGameState.E_END_GAME_TIMEOUT;
+				EndGame();
 			}
 		}
 	}
 
-	public void OnPlayerKilled()
+	private void EndGame()
 	{
-		_currentState = EGameState.E_END_GAME_PLAYER_DETECTED;
-		FindObjectOfType<GUIController> ().OnEndGame (_currentState);
+		AppManager.GUI.ShowInfoScreen(true);
+		AppManager.GUI.ShowTimer(false);
 
 		// Disable all enemies
-		foreach(EnemyController enemy in FindObjectOfType<GameController>().getEnemies())
+		foreach (EnemyController enemy in Enemies)
 		{
 			enemy.OnEndGame();
 		}
 	}
+}
 
-	public void OnCorpseDetected()
-	{
-		_currentState = EGameState.E_END_GAME_CORPSE_DETECTED;
-		FindObjectOfType<GUIController> ().OnEndGame (_currentState);
-				
-		// Disable all enemies
-		foreach(EnemyController enemy in FindObjectOfType<GameController>().getEnemies())
-		{
-			enemy.OnEndGame();
-		}
-	}
-
-	public void OnTimeOut()
-	{
-		_currentState = EGameState.E_END_GAME_TIMEOUT;
-		FindObjectOfType<GUIController> ().OnEndGame (_currentState);
-
-	}
-
-	public EnemyController[] getEnemies()
-	{
-		return _aEnemies;
-	}
-
-	public float getCountDown()
-	{
-		return _countDownValue;
-	}
-
+public enum EGameState
+{
+	E_START_GAME,
+	E_INGAME,
+	E_END_GAME_WIN,
+	E_END_GAME_PLAYER_DETECTED,
+	E_END_GAME_CORPSE_DETECTED,
+	E_END_GAME_TIMEOUT
 }
